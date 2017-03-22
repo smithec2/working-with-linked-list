@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Assignment 11</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h3>Working with Linked List Application</h3>
+<h2></h2>
+<form action="#" th:action="@{/}" th:object="${post}" method="post">
+    <table>
+        <tr>
+            <td>Text:</td>
+            </tr>
+        <tr>
+            <td><textarea rows="7" cols="90" th:field="*{textIn}"/></td>
+            <td th:if="${#fields.hasErrors('textIn')}" th:errors="*{textIn}">textIn error message</td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" style="float: right">Submit post</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
